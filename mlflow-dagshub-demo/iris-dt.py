@@ -10,8 +10,11 @@ from sklearn.ensemble import RandomForestClassifier
 
 import mlflow
 
+import dagshub
+dagshub.init(repo_owner='arshpreetsingh-01', repo_name='mlflow-dagshub-demo', mlflow=True)
+
 # Change this from your sqlite URI to the local server
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.set_tracking_uri("https://dagshub.com/arshpreetsingh-01/mlflow-dagshub-demo.mlflow")
 
 import matplotlib.pyplot as plt
 import seaborn as sns
